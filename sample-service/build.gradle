@@ -1,0 +1,54 @@
+apply plugin: 'application'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+mainClassName = 'com.sample.SampleApplication'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.2'
+    }
+}
+
+sourceSets {
+    integrationTest {
+        java.srcDir 'src/test/integration/java'
+        resources.srcDir 'src/test/integration/resources'
+    }
+    test {
+        java.srcDir 'src/test/unit/java'
+        resources.srcDir 'src/test/unit/resources'
+    }
+}
+
+task integrationTest(type: Test) {
+    testClassesDir = sourceSets.integrationTest.output.classesDir
+    classpath = sourceSets.integrationTest.runtimeClasspath
+}
+
+// IntelliJ needs to be told that the service integration tests depend on the client project
+idea.module.scopes.TEST.plus += [ configurations.integrationTestCompile, configurations.integrationTestRuntime ]
+
+dependencies {
+    compile (
+        'io.dropwizard:dropwizard-core:' + dropwizardVersion,
+        'io.federecio:dropwizard-swagger:0.7.0',
+        project(':sample-api')
+    )
+    testCompile (
+        'io.dropwizard:dropwizard-testing:' + dropwizardVersion
+    )
+    integrationTestCompile (
+         sourceSets.main.output,
+         configurations.testCompile,
+         project(':sample-client')
+    )
+}
+
+shadowJar {
+    mergeServiceFiles()
+}

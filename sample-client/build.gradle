@@ -1,0 +1,7 @@
+dependencies {
+    compile (
+        'io.dropwizard:dropwizard-core:' + dropwizardVersion,
+        'io.dropwizard:dropwizard-client:' + dropwizardVersion,
+        project(':sample-api')
+    )
+}
