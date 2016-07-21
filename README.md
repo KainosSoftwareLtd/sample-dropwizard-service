@@ -2,6 +2,8 @@
 
 Sample project for Dropwizard 0.9.3 demonstrating the courtesy client pattern.
 
+The sample service requires Java 1.8 and [Gradle 2.9 or higher](https://gradle.org/gradle-download/)
+
 ## Project Structure
 
 The project contains three subprojects hosting the API, the application (service), and a courtesy client.
@@ -33,6 +35,8 @@ of the client has been produced because the API interface implemented by the ser
 
 ## Run Dropwizard service
 
+Build, package and run the service:
+
 ```
 ./go
 ```
@@ -51,7 +55,7 @@ gradle integrationTest
 
 The integration test provided currently does only the following:
 1. Run the service
-2. Call the service using the client
+2. Call the service HTTP API using the client
 
 
 ## Auto Generated Documentation
