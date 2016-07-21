@@ -1,17 +1,19 @@
-apply plugin: 'application'
-apply plugin: 'com.github.johnrengelman.shadow'
-
-mainClassName = 'com.sample.SampleApplication'
-
 buildscript {
     repositories {
         mavenCentral()
         jcenter()
     }
+}
 
-    dependencies {
-        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.2'
-    }
+plugins {
+    id 'application'
+    id "com.github.johnrengelman.shadow" version "1.2.3"
+}
+
+mainClassName = 'com.sample.SampleApplication'
+
+shadowJar {
+    mergeServiceFiles()
 }
 
 sourceSets {
@@ -49,6 +51,4 @@ dependencies {
     )
 }
 
-shadowJar {
-    mergeServiceFiles()
-}
+
