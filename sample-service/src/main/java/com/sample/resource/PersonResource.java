@@ -4,8 +4,8 @@ import com.codahale.metrics.annotation.Timed;
 import com.sample.api.PersonResponse;
 import com.sample.domain.Person;
 import com.sample.service.PersonService;
-import com.wordnik.swagger.annotations.Api;
-import com.wordnik.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

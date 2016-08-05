@@ -40,7 +40,7 @@ public class SampleServiceIntegrationTest {
     }
 
     @Test
-    public void getAll_returnsListWithAxelInIt() {
+    public void getAll_returnsListWithJohnSmithInIt() {
         final String expectedName = "John Smith";
 
         List<PersonResponse> resultList = client.getAll();

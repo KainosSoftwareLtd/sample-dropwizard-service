@@ -38,7 +38,7 @@ idea.module.scopes.TEST.plus += [ configurations.integrationTestCompile, configu
 dependencies {
     compile (
         'io.dropwizard:dropwizard-core:' + dropwizardVersion,
-        'io.federecio:dropwizard-swagger:0.7.0',
+        'com.smoketurner:dropwizard-swagger:1.0.0-1',
         project(':sample-api')
     )
     testCompile (
