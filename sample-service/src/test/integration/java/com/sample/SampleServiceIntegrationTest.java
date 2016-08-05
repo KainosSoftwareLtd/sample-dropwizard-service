@@ -32,7 +32,7 @@ public class SampleServiceIntegrationTest {
         ClientConfiguration clientConfiguration = new ClientConfiguration();
         clientConfiguration.host = "http://localhost";
         clientConfiguration.port = RULE.getLocalPort();
-        clientConfiguration.serviceContext = "person";
+        clientConfiguration.serviceContext = "people";
 
         JerseyClientConfiguration jerseyConfiguration = new JerseyClientConfiguration();
 
