@@ -1,8 +1,10 @@
 # Dropwizard Courtesy Client Sample App
 
-Sample project for Dropwizard 0.9.3 demonstrating the [courtesy client pattern](http://willhamill.com/2016/07/17/dropwizard-courtesy-client-design-pattern).
+Sample project for [Dropwizard 1.0.0](http://www.dropwizard.io/1.0.0/docs/manual/index.html) demonstrating the [courtesy client pattern](http://willhamill.com/2016/07/17/dropwizard-courtesy-client-design-pattern).
 
 The sample service requires Java 1.8 and [Gradle 2.9 or higher](https://gradle.org/gradle-download/)
+
+For a sample service compatible with [Dropwizard 0.9.3](http://www.dropwizard.io/0.9.3/docs/manual/index.html) check out the [dropwizard-0.9.3](https://github.com/KainosSoftwareLtd/sample-dropwizard-service/releases/tag/dropwizard-0.9.3) release
 
 ## Project Structure
 

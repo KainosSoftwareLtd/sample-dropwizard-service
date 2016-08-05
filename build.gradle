@@ -19,6 +19,6 @@ allprojects {
 
     // Set our project-wide variables
     project.ext {
-        dropwizardVersion = '0.9.3'
+        dropwizardVersion = '1.0.0'
     }
 }
