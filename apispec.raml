@@ -1,0 +1,44 @@
+#%RAML 0.8
+title: Sample Dropwizard Service RAML API specification
+version: v1.3.3.7
+baseUri: https://api.sample.com
+/people:
+  description: Person collection
+  get:
+    description: Get a list of stored people
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              [
+                {
+                  "id": 1,
+                  "name": "John Smith"
+                },
+                {
+                  "id": 2,
+                  "name": "Jane Doe"
+                }
+              ]
+  /{id}:
+    description: Person entities
+    get:
+      description: Get a stored person
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "id": 2,
+                  "name": "Jane Doe"
+                }
+        404:
+          body:
+            application/json:
+              example: |
+                {
+                  "code": 404,
+                  "message": "HTTP 404 Not Found"
+                }

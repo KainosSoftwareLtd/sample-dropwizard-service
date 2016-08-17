@@ -21,7 +21,7 @@ import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 
 @Path("/people")
-@Api("Sample Dropwizard Service")
+@Api("Sample Dropwizard Service Swagger API annotations")
 @Produces({MediaType.APPLICATION_JSON})
 public class PersonResource {
     private final static Logger LOGGER = LoggerFactory.getLogger(PersonResource.class);

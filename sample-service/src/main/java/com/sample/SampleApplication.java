@@ -10,6 +10,8 @@ import io.dropwizard.setup.Environment;
 import io.federecio.dropwizard.swagger.SwaggerBundle;
 import io.federecio.dropwizard.swagger.SwaggerBundleConfiguration;
 
+import net.ozwolf.raml.RamlView;
+
 public class SampleApplication extends Application<SampleConfiguration> {
     public static void main(String[] args) throws Exception {
         new SampleApplication().run(args);
@@ -28,6 +30,7 @@ public class SampleApplication extends Application<SampleConfiguration> {
                 return configuration.swaggerBundleConfiguration;
             }
         });
+        bootstrap.addBundle(RamlView.bundle("apispec.raml"));
     }
 
     @Override
