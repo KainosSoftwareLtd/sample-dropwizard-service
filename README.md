@@ -66,3 +66,8 @@ The integration test provided currently does only the following:
 `http://localhost:4560/swagger`
 
 See the PersonResource class for information on how to annotate the methods so they are displayed in the documentation.
+
+[RAML](http://raml.org) API documentation is also hosted inside the sample-service, available on the following path:
+`http://localhost:4560/api`
+
+The RAML API documentation is generated from a RAML API specification file, `apispec.raml`, in the root of the project directory.
